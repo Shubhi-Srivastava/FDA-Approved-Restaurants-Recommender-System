@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <h1>Reviewed</h1>
+    <p>
+      <br />
+      Enter your details below
+    </p>
+    <form>
+      <input name="email" type="text" [(ngModel)]="user" placeholder="Email Id"  required />
+      <input name="password" type="password" placeholder="Password"  required />
+      <input name="role" type="text" placeholder="Role"  required />
+      <button id="login" (click)="login()">Login</button>
+      <p id="newMember" class="new-member"></p>
+      <p id="errorMember" class="error-member"></p>
+    </form>
+  </div>

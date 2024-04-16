@@ -1,0 +1,55 @@
+<div class = "font">
+<div class="header">
+    <div class="row color-2">
+    <div class="col-9 font-and-margin">Reviewed</div>    
+    <div class="col-3 "> 
+<div class="align-center">Welcome Anagha</div>
+<div class="align-center">Logout</div>
+    </div>
+</div>    
+<div class="search">
+    <div class="row color search-row">
+        <div class="col-4"></div>    
+        <div class="col-1 filter">Filter</div>    
+        <div class="col-3 margin-top"><input name="filter" [(ngModel)]="searchtext" type="text" placeholder="Search"/></div>    
+        <div class="col-4"></div>    
+    </div>
+</div>    
+<div class="review-list-add-new">
+    <div class="row">
+    <div class="col-3 font-2">Review List</div>
+    <div class="col-7"></div>
+    <div class="col-2">
+        <button type="button" class="btn-cls" (click)="addNew()">Add New</button>
+    </div>
+</div>
+</div>  
+<div *ngFor = "let data of inspectorData | search : searchtext ; index as i" class="margin">
+<div class="row  ">
+    <div class="col-3"></div>
+    <div class="col-3 color">Business Name</div>
+    <div class="col-3 color">{{data.business_name}}</div>
+</div>
+<div class="row  ">
+    <div class="col-3"></div>
+    <div class="col-3 color">Inspection Date</div>
+    <div class="col-3 color">{{data.inspection_date}}</div>
+</div>
+<div class="row  ">
+    <div class="col-3"></div>
+    <div class="col-3 color">Inspection Score</div>
+    <div class="col-3 color">{{data.inspection_score}}</div>
+</div>
+<div class="row  ">
+    <div class="col-3"></div>
+    <div class="col-3 color">Inspection Type</div>
+    <div class="col-3 color">{{data.inspection_type}}</div>
+</div>
+<div class="row  ">
+    <div class="col-3"></div>
+    <div class="col-3 color">Inspection ID</div>
+    <div class="col-3 color">{{data.inspection_id}}</div>
+</div>
+</div>
+</div>      
+</div>

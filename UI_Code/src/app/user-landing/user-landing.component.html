@@ -1,0 +1,58 @@
+<div class="font">
+<div class="header">
+    <div class="row color-2">
+    <div class="col-9 font-and-margin">Reviewed</div>    
+    <div class="col-3">
+<div class="align-center">Welcome Anagha</div>
+<div class="align-center">Logout</div>
+    </div>    
+    
+    </div>
+</div>    
+<div class="search">
+    <div class="row color">
+        <div class="col-4"></div>    
+        <div class="col-1 filter">Filter</div>    
+        <div class="col-3"><input name="filter" type="text" [(ngModel)]="searchtext" placeholder="Search"/></div>    
+        <div class="col-4"></div>    
+    </div>
+</div>    
+<div class="review-list-add-new">
+    <div class="row">
+    <div class="col-3">Review List</div>
+    <div class="col-7"></div>
+    <div class="col-2"></div>
+</div>
+</div>  
+<div *ngFor = "let data of userData | search : searchtext" class="margin">
+    <div class="row  ">
+        <div class="col-3"></div>
+        <div class="col-3 color">Business City</div>
+        <div class="col-3 color">{{data.business_city}}</div>
+    </div>
+    <div class="row  ">
+        <div class="col-3"></div>
+        <div class="col-3 color">Name</div>
+        <div class="col-3 color">{{data.business_name}}</div>
+    </div>
+    <div class="row  ">
+        <div class="col-3"></div>
+        <div class="col-3 color">Business State</div>
+        <div class="col-3 color">{{data.business_state}}</div>
+    </div>
+    <div class="row  ">
+        <div class="col-3"></div>
+        <div class="col-3 color">Cuisine</div>
+        <div class="col-3 color">{{data.cuisine}}</div>
+    </div>
+    <div class="row  ">
+        <div class="col-3"></div>
+        <div class="col-3 color">Rating</div>
+        <div class="col-3 color">{{data.rating}}</div>
+    </div>
+    <div class="row  ">
+        <div class="col-3"></div>
+        <div class="col-3 color">Restaurant Type</div>
+        <div class="col-3 color">{{data.restaurant_type}}</div>
+    </div>
+        </div>   
